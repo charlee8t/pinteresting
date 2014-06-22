@@ -1,20 +1,43 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url(http://fonts.googleapis.com/css?family=Lato);
+
+$font-family-sans-serif: 'Lato', sans-serif;
+
 // Body
 
-$body-bg:#67e667;
+$body-bg:#ecf0f1;
 
 // Navbar
 
-$navbar-default-bg:#008500;
+$navbar-default-bg:#95a5a6;
 $navbar-default-border: none;
+$navbar-height: 45px;
 $navbar-default-link-color:#fff;
 
-$brand-primary: #f39c12;
+$brand-primary: #34495e;
 
 // jumbotron
 
 
-$jumbotron-bg: #269926;
-$jumbotron-color: #ecf0f1;
+$jumbotron-bg: #ecf0f1;
+$jumbotron-color: #34495e;
 
+.center {
+
+	text-align:center;
+
+}
+
+.jumbotron {
+
+
+	font-family:lobster;
+}
+
+.navbar-brand {
+
+	font-family:lobster;
+
+}
 
 @import 'bootstrap';
