@@ -28,10 +28,17 @@ $jumbotron-color: #34495e;
 
 }
 
-.jumbotron {
+.jumbotron h1{
 
 
 	font-family:lobster;
+}
+
+h2 {
+
+	$font-family-sans-serif: 'Lato', sans-serif;
+
+
 }
 
 .navbar-brand {
