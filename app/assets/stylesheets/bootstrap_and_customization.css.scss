@@ -9,7 +9,7 @@ $body-bg:#ecf0f1;
 
 // Navbar
 
-$navbar-default-bg:#95a5a6;
+$navbar-default-bg:#34495e;
 $navbar-default-border: none;
 $navbar-height: 45px;
 $navbar-default-link-color:#fff;
@@ -40,10 +40,21 @@ h2 {
 
 
 }
+.panel-primary{
 
+$brand-primary:#95a5a6;
+}
 .navbar-brand {
 
 	font-family:lobster;
+
+}
+
+.panel-heading h2{
+
+	font-family:lobster;
+
+
 
 }
 
