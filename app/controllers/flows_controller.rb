@@ -1,6 +1,6 @@
 class FlowsController < ApplicationController
   before_action :set_flow, only: [:show, :edit, :update, :destroy]
-  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :correct_user, only: [ :edit, :update, :destroy]
   before_action :authenticate_user!, except:[:index, :show]
 
   
@@ -55,7 +55,7 @@ class FlowsController < ApplicationController
     def correct_user
 
       @flow = current_user.flows.find_by(id: params[:id])
-      redirect_to flows_path, notice: "Not authorize to edit this pin"  if @pin.nil?
+      redirect_to flows_path, notice: "Not authorize to edit this pin"  if @flow.nil?
 
     end
 
