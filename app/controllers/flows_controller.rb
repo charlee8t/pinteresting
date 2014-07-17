@@ -1,5 +1,7 @@
 class FlowsController < ApplicationController
   before_action :set_flow, only: [:show, :edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, except:[:index, :show]
 
   
   def index
@@ -12,7 +14,7 @@ class FlowsController < ApplicationController
 
   
   def new
-    @flow = Flow.new
+    @flow = current_user.flows.build
   end
 
   
@@ -21,7 +23,7 @@ class FlowsController < ApplicationController
 
   
   def create
-    @flow = Flow.new(flow_params)
+    @flow = current_user.flows.build(flow_params)
     if @flow.save
       redirect_to @flow, notice: 'Flow was successfully created.' 
           else
@@ -49,6 +51,16 @@ class FlowsController < ApplicationController
     def set_flow
       @flow = Flow.find(params[:id])
     end
+
+    def correct_user
+
+      @flow = current_user.flows.find_by(id: params[:id])
+      redirect_to flows_path, notice: "Not authorize to edit this pin"  if @pin.nil?
+
+    end
+
+
+
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def flow_params
