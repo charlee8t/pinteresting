@@ -64,6 +64,6 @@ class FlowsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def flow_params
-      params.require(:flow).permit(:description)
+      params.require(:flow).permit(:description, :image)
     end
 end
