@@ -1,6 +1,10 @@
-<h1>Listing flows</h1>
+<div class="panel panel-default">
+  <div class="panel-heading" id="showFlowTitle">
+    <h1>Flows</h1>
+  </div>
 
-<table>
+
+<table class="table">
   <thead>
     <tr>
 
@@ -27,8 +31,13 @@
   </tbody>
 </table>
 
+
 <br>
+<div class="panel-footer">
 
 <% if user_signed_in? %>
   <%= link_to 'New Flow', new_flow_path %>
 <% end %>
+</div>
+
+</div>
