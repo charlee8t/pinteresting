@@ -5,22 +5,26 @@ $font-family-sans-serif: 'Lato', sans-serif;
 
 // Body
 
-$body-bg:#ecf0f1;
+$body-bg:#fff;
 
 // Navbar
 
-$navbar-default-bg:#34495e;
+$navbar-default-bg:#2ecc71;
 $navbar-default-border: none;
 $navbar-height: 45px;
 $navbar-default-link-color:#fff;
+$navbar-default-link-hover-color:#95a5a6;
+
 
 $brand-primary: #34495e;
 
 // jumbotron
 
 
-$jumbotron-bg: #ecf0f1;
-$jumbotron-color: #34495e;
+$jumbotron-bg: #fff;
+$jumbotron-color: #2ecc71;
+
+
 
 .center {
 
@@ -42,7 +46,7 @@ h2 {
 }
 .panel-primary{
 
-$brand-primary:#95a5a6;
+$brand-primary:#2ecc71;
 }
 .navbar-brand {
 
@@ -63,5 +67,12 @@ $brand-primary:#95a5a6;
 	text-align: center;
 
 }
+
+.mainDescription{
+
+	width: 50%;
+	margin: 0 auto;
+}
+
 
 @import 'bootstrap';

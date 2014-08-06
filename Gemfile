@@ -10,6 +10,9 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'bootstrap-sass'
 gem 'devise','~> 3.2.4'
 gem 'paperclip', github: 'thoughtbot/paperclip'
+gem 'aws-sdk', '~> 1.48.1'
+gem 'nokogiri', '~> 1.6.3'
+gem 'auto_html', '~> 1.6.4'
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin ]
 gem 'jquery-rails'
