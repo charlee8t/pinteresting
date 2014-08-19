@@ -1,43 +1,25 @@
-<div class="panel panel-default">
-  <div class="panel-heading" id="showFlowTitle">
-    <h1>Flows</h1>
-  </div>
-
-
-<table class="table">
-  <thead>
-    <tr>
-
-      <th>Image</th>
-      <th>Description</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @flows.each do |flow| %>
-      <tr>
-        <td><%= image_tag flow.image.url(:thumb) %></td>
-        <td><%= flow.description %></td>
-        <td><%= flow.user.email if flow.user %></td>
-        <td><%= link_to 'Show', flow %></td>
+<div id="flows" class="transitions-enabled">
+  <% @flows.each do |flow| %>
+    <div class="box panel panel-default">
+      <%= image_tag flow.image.url(:medium) %>
+      <div class="panel-body">
+        <%= flow.description %>
+        <%= flow.user.email if flow.user %>
+        <%= link_to 'Show', flow %>
         <% if flow.user == current_user %>
-         <td><%= link_to 'Edit', edit_flow_path(flow) %></td>
-         <td><%= link_to 'Destroy', flow, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <%= link_to 'Edit', edit_flow_path(flow) %>
+          <%= link_to 'Destroy', flow, method: :delete, data: { confirm: 'Are you sure?' } %>
         <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-
-<br>
-<div class="panel-footer">
-
-<% if user_signed_in? %>
-  <%= link_to 'New Flow', new_flow_path %>
-<% end %>
+      </div>
+    </div>
+  <% end %>
 </div>
 
-</div>
+
+
+
+
+
+
+
+

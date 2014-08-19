@@ -13,10 +13,12 @@ gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'aws-sdk', '~> 1.48.1'
 gem 'nokogiri', '~> 1.6.3'
 gem 'auto_html', '~> 1.6.4'
+gem 'masonry-rails', '~> 0.2.1'
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin ]
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'jquery-turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
