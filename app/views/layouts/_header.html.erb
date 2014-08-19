@@ -41,7 +41,10 @@
 
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
-        <li><%= link_to 'New Flow', new_flow_path %></li>
+        <li><%= link_to new_flow_path do %>
+          <span class="glyphicon glyphicon-plus"></span>
+          <% end %>
+        </li>
         <li><%= link_to "Account Settings", edit_user_registration_path%></li>
         <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
 

@@ -1,14 +1,21 @@
 <div id="flows" class="transitions-enabled">
   <% @flows.each do |flow| %>
     <div class="box panel panel-default">
-      <%= image_tag flow.image.url(:medium) %>
+      <%= link_to image_tag(flow.image.url(:medium)), flow %>
       <div class="panel-body">
-        <%= flow.description %>
-        <%= flow.user.email if flow.user %>
-        <%= link_to 'Show', flow %>
+        <p><%= flow.description %></p>
+        <p><strong><%= flow.user.email if flow.user %></strong></p>
         <% if flow.user == current_user %>
-          <%= link_to 'Edit', edit_flow_path(flow) %>
-          <%= link_to 'Destroy', flow, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <div class="actions">
+            <%= link_to edit_flow_path(flow) do %>
+            <span class="glyphicon glyphicon-edit"></span>
+            Edit
+            <% end %>
+            <%= link_to flow, method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <span class="glyphicon glyphicon-trash"></span>
+            Delete
+            <% end %>
+          </div>  
         <% end %>
       </div>
     </div>

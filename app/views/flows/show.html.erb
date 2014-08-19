@@ -1,11 +1,24 @@
-<%= image_tag @flow.image.url(:medium) %>
-
-<p>
-  <strong>Description:</strong>
-  <%= @flow.description %>
-</p>
-
-<% if @flow.user == current_user %>
-	<%= link_to 'Edit', edit_flow_path(@flow) %> |
-<% end %>
 <%= link_to 'Back', flows_path %>
+
+<div class="row">
+
+	<div class="col-md-offset-2 col-md-8">
+		<div class="panel panel-default">
+			<div class="panel-heading center">
+				<%= image_tag @flow.image.url(:medium) %>
+			</div>
+			<div class="panel-body">
+				<p><%= @flow.description %></p>
+				<p><strong><%= @flow.user.email if @flow.user %></strong></p>
+
+				<% if @flow.user == current_user %>
+					<%= link_to edit_flow_path(@flow) do %>
+            <span class="glyphicon glyphicon-edit"></span>
+            Edit
+            <% end %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+
+</div>
