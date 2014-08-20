@@ -1,3 +1,7 @@
+<%= render 'pages/home' unless user_signed_in? %>
+  
+
+
 <div id="flows" class="transitions-enabled">
   <% @flows.each do |flow| %>
     <div class="box panel panel-default">
