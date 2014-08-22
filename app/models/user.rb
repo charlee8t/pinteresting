@@ -6,5 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :flows
 
+  validates :name, presence: true
+
 
 end

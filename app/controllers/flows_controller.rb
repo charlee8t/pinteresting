@@ -5,7 +5,7 @@ class FlowsController < ApplicationController
 
   
   def index
-    @flows = Flow.all
+    @flows = Flow.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 1)
   end
 
   

@@ -14,6 +14,8 @@ gem 'aws-sdk', '~> 1.48.1'
 gem 'nokogiri', '~> 1.6.3'
 gem 'auto_html', '~> 1.6.4'
 gem 'masonry-rails', '~> 0.2.1'
+gem 'will_paginate', '~> 3.0'
+gem 'will_paginate-bootstrap'
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin ]
 gem 'jquery-rails'

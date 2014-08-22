@@ -8,7 +8,7 @@
       <%= link_to image_tag(flow.image.url(:medium)), flow %>
       <div class="panel-body">
         <p><%= flow.description %></p>
-        <p><strong><%= flow.user.email if flow.user %></strong></p>
+        <p><strong><%= flow.user.name if flow.user %></strong></p>
         <% if flow.user == current_user %>
           <div class="actions">
             <%= link_to edit_flow_path(flow) do %>
@@ -25,6 +25,8 @@
     </div>
   <% end %>
 </div>
+
+<div class="center"><%= will_paginate @posts, renderer: BootstrapPagination::Rails %></div>
 
 
 

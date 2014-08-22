@@ -9,7 +9,7 @@
 			</div>
 			<div class="panel-body">
 				<p><%= @flow.description %></p>
-				<p><strong><%= @flow.user.email if @flow.user %></strong></p>
+				<p><strong><%= @flow.user.name if @flow.user %></strong></p>
 
 				<% if @flow.user == current_user %>
 					<%= link_to edit_flow_path(@flow) do %>
